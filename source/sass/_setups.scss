@@ -1,0 +1,33 @@
+$white: #ffffff;
+$light-blue: #629BD2;
+$dark-blue: #43627e;
+$dark-blue_hover:#395169;
+$messages_text: #686868;
+$menu_text: #8db0cf;
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -2px;
+    padding: 0;
+    border: 0;
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.15;
+    font-size: 18px;
+}
+
+.messager-wrapper {
+    display: block;
+    margin: auto;
+
+    position: relative;
+
+    width: 600px;
+    height: 600px;
+}
