@@ -12,7 +12,7 @@
 <body>
     <main>
         <div class="messager-wrapper">
-            <section class="menu">
+            <section id="menuPage" class="menu">
                 <ul class="menu__list">
                     <li class="menu__item">
                         <a href="#" class="menu__link">
@@ -51,15 +51,21 @@
                     </li>
                 </ul>
             </section>
-            <section class="notifications">
+
+            <section id="notificationsPage" class="notifications">
                 <div class="notifications__wrapper">
                     <header class="notifications__header header">
-                        <svg width="45" height="27">Иконка меню</svg>
+                        <button id="menuButton" class="notifications__menu-button">
+                            <svg width="45" height="25" class="menu-button__icon" fill="currentColor">
+                                <use xlink:href="img/notifications__menu-button.svg#menuButton"/> 
+                            </svg>
+                        </button>
                         <h5 class="header__title">Notifications</h5>
-                        <input class="header__searchbar visually-hidden" type="text" placeholder="Search ...">
+                        <input id="searchBar" class="header__searchbar " type="text" placeholder="Search ...">
+                        <button id="searchButton" class="notifications__search-button"></button>
                     </header>
                     <ul class="notifications__list">
-                        <li class="notifications__item notifications__item_first">
+                        <li class="notifications__item">
                             <a href="#" class="notifications__link">
                                 <p class="notifications__text">
                                     <span class="notifications__text-date">
@@ -83,7 +89,7 @@
                                 </p>
                             </a>
                         </li>
-                        <li class="notifications__item notifications__item_last">
+                        <li class="notifications__item">
                             <a href="#" class="notifications__link">
                                 <p class="notifications__text">
                                     <span class="notifications__text-date">
@@ -103,5 +109,6 @@
         
     </main>
     
+    <script src="js/app.js"></script>
 </body>
 </html>

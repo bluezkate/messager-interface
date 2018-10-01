@@ -1,5 +1,18 @@
 .notifications {
     width: 450px;
+
+    margin: auto;
+    box-shadow: 10px 10px 29px 0px rgba(0,0,0,0.75);
+}
+
+.notifications_menu-visible {
+    transform: translateX(240px);
+    transition: all 400ms ease-out;
+}
+
+.notifications_menu-hidden {
+    transform: translateX(0px);
+    transition: all 400ms ease-out;
 }
 
 .notifications__wrapper {
@@ -12,16 +25,35 @@
     position: relative;
 
     display: flex;
-    justify-content: space-between;
 
     background-color: $light-blue;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
 }
 
+.notifications__menu-button {
+    padding: 0;
+    margin: 0;
+    margin-right: 85px;
+
+    border: none;
+    background-color: transparent;
+
+    cursor: pointer;
+}
+
+.menu-button__icon {
+    color: $menu_icon;
+}
+
+.notifications__menu-button:hover .menu-button__icon {
+    color: $white;
+}
+
 .header__title {
     padding: 0;
     margin: 0;
+    margin-right: auto;
 
     display: inline-block;
 
@@ -36,14 +68,44 @@
 
     position: absolute;
     top: 19px;
+    left: 50px;
 
     border: none;
     border-radius: 100px;
+
+    visibility: hidden;
+    opacity: 0;
+}
+
+.header__searchbar_visible {
+    visibility: visible;
+    opacity: 1;
+
+    transform: translateX(-25px);
+    transition: all 300ms ease-out;
+}
+
+.notifications__search-button {
+    width: 17px;
+    height: 21px;
+
+    background-color: transparent;
+    border: 1px solid $menu_icon;
+
+    cursor: pointer;
+
+    &:hover {
+        border-color: $white;
+    }
+
 }
 
 .notifications__list {
-    padding: 0 30px;
+    padding: 30px;
+    padding-bottom: 0;
     margin: 0;
+
+    overflow: hidden;
 
     list-style-type: none;
 
@@ -54,16 +116,45 @@
 
 .notifications__item {
     padding-left: 30px;
-    margin-bottom: 40px;
+    margin-bottom: 45px;
 
-    &_first {
-        padding-top: 30px;
+    position: relative;
+
+    &:before {
+        content: '';
+        position: absolute;
+
+        width: 17px;
+        height: 17px;
+        box-sizing: border-box;
+
+        left: 0px;
+
+        border: 3px solid  $light-blue;
+        background-color: transparent;
+        border-radius: 10px;
     }
 
-    &_last {
-        padding-bottom: 30px;
+    &:after {
+        content: '';
+        position: absolute;
+        z-index: 2;
+
+        width: 5px;
+        height: 90px;
+        box-sizing: border-box;
+
+        left: 6px;
+        top: 23px;
+
+        border: none;
+        background-color: $light-gray;
     }
 
+}
+
+.notifications__item:hover .notifications__text {
+    color: $light-blue;
 }
 
 .notifications__link {
@@ -82,9 +173,9 @@
 }
 
 .notifications__text-date {
-    margin-bottom: 5px;
+    margin-bottom: 7px;
 
-    font-size: 18px;
+    font-size: 16px;
 }
 
 .notifications__text-message {

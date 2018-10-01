@@ -1,0 +1,7 @@
+<svg  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="45" height="25">
+    <symbol id="menuButton">
+        <rect width="30" height="5" x="0" y="3" rx="3"/>
+        <circle r="5" cx="39" cy="6"/>
+        <rect width="44" height="5" x="0" y="20" rx="3"/>
+    </symbol>
+</svg>

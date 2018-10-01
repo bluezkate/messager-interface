@@ -1,9 +1,11 @@
 $white: #ffffff;
+$light-gray:#e9e9ea;
 $light-blue: #629BD2;
 $dark-blue: #43627e;
 $dark-blue_hover:#395169;
 $messages_text: #686868;
 $menu_text: #8db0cf;
+$menu_icon: #b3dafd;
 
 .visually-hidden {
     position: absolute;
@@ -23,11 +25,13 @@ body {
 }
 
 .messager-wrapper {
-    display: block;
+    display: flex;
     margin: auto;
 
     position: relative;
+    overflow: hidden;
 
     width: 600px;
     height: 600px;
+    background-color: $dark-blue;
 }
